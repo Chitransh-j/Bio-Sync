@@ -149,6 +149,7 @@ export default function InputForm({ image }: TProps) {
             id={det.id}
             inputType={det.inputType}
             label={det.label}
+            {...det.id === 'email' && { type: 'email' }}  // ADDED THE EMAIL REGEX 
             required={isFieldRequired(det.id)}
             placeholder={det.placeholder}
             widthClass={"w-full"}
